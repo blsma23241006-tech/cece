@@ -1,0 +1,214 @@
+/* ==============================
+   IMPORT FONT
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+/* ==============================
+   RESET & GLOBAL
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: linear-gradient(135deg, #ffe4ef, #f5fbff);
+    color: #555;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==============================
+   ANIMATIONS
+============================== */
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(1.5deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-1.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes floatEmoji {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes blink {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+    background: linear-gradient(135deg, #ffb6d9, #ffd6ea);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 12px 30px rgba(255,182,217,0.5);
+}
+
+header h1 {
+    font-size: 46px;
+}
+
+header h1::before { content: "✨ "; }
+header h1::after  { content: " ✨"; }
+
+header p::after {
+    content: " 🌸💖";
+}
+
+/* ==============================
+   NAVBAR IMUT
+============================== */
+.imut-navbar {
+    background: linear-gradient(135deg, #ffe0f0, #e8f8ff);
+    padding: 14px 36px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 30px auto;
+    display: flex;
+    gap: 18px;
+    position: relative;
+    box-shadow: 0 12px 25px rgba(255,182,217,0.45);
+    animation: wiggle 4s ease-in-out infinite;
+}
+
+.imut-navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff69b4;
+    transition: 0.3s ease;
+}
+
+.imut-navbar a::after {
+    content: " 💕";
+}
+
+.imut-navbar a:hover {
+    color: #d63384;
+    animation: wiggle 0.8s infinite;
+}
+
+.imut-navbar a.active {
+    color: #ff1493;
+}
+
+.imut-navbar a.active::before {
+    content: "🎀 ";
+}
+
+.imut-navbar::before {
+    content: "🌸";
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    animation: floatEmoji 2s infinite;
+}
+
+.imut-navbar::after {
+    content: "✨";
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    animation: floatEmoji 2.5s infinite;
+}
+
+/* ==============================
+   SECTION / CARD
+============================== */
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(255,182,217,0.45);
+    position: relative;
+    animation: wiggle 6s ease-in-out infinite;
+}
+
+section::after {
+    content: "✨";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    animation: blink 1.2s infinite alternate;
+}
+
+section h2 {
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+section h2::before {
+    content: "🌸 ";
+}
+
+/* ==============================
+   LIST IMUT
+============================== */
+ul li {
+    margin: 8px 0;
+}
+
+ul li::marker {
+    content: "🎀 ";
+}
+
+/* ==============================
+   BUTTON GEMAS
+============================== */
+.imut-button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #ffb6d9, #ffe6f2);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #d63384;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255,182,217,0.6);
+    animation: wiggle 3s infinite;
+}
+
+.imut-button:hover {
+    background: linear-gradient(135deg, #ffd6ea, #fff0f7);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+footer::before {
+    content: "💖 ";
+}
+
+
+
+
+
+
+
+
+
